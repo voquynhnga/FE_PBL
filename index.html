@@ -23,25 +23,30 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Dạy và học trực tuyến</h2>
-            <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
-            <button id="NewClassRoom" type="button" class="btn btn-success">
-                <span class="icon">
-                    <img src="https://img.icons8.com/ios-filled/24/ffffff/plus-math.png" />
-                </span>
-                Cuộc họp mới
-            </button>
+<section>
+    <h2>Dạy và học trực tuyến</h2>
+    <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
 
-            <textarea id="CodeAppointment" type="textarea" class="form-text align-content-start">
-            Nhập mã cuộc họp
-            </textarea>
+    <!-- Tạo container để giữ các nút và input trên cùng một hàng -->
+    <div class="flex-container">
+        <button id="NewClassRoom" type="button" class="meeting-btn">
+            <span class="icon">
+                <img src="https://img.icons8.com/ios-filled/24/ffffff/plus-math.png" alt="plus icon" />
+            </span>
+            Cuộc họp mới
+        </button>
 
-            <button id="JoinAppointment" type="button" class="btn btn-primary">
-                Tham gia
-            </button>
+        <div class="input_container">
+            <span class="icon">
+                <img src="https://img.icons8.com/ios-filled/20/000000/keyboard.png" alt="keyboard icon">
+            </span>
+            <input type="text" id="meetingCode" placeholder="Nhập mã hoặc đường dẫn" oninput="enterCode()">
+        </div>
 
-        </section>
+        <button id="joinButton" class="join-btn" onclick="joinMeeting()" disabled>Tham gia</button>
+    </div>
+
+</section>
     </main>
     <footer>
         <p>&copy; PBL4</p>
