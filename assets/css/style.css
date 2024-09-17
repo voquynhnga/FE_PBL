@@ -13,153 +13,169 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
     text-align: center;
     position: fixed;
-    margin-bottom: 10px;
+    top: 0;
     width: 100%;
+    height: 50px;
+    z-index: 10;
 }
 
-nav {
+li {
     list-style: none;
-    display: flex;
-    justify-content: center;
 }
 
-nav li {
-    margin: 0 15px;
+#nav,
+.subnav {
+    list-style-type: none;
 }
 
-nav li a {
-    color: white;
-    text-decoration: none;
+
+#nav>li {
     display: inline-block;
+    position: relative;
+}
+
+#nav>li>a {
+    /* margin: 0 15px; */
+    text-decoration: none;
+    padding: 0 24px;
+    color: white;
+    display: block;
+    line-height: 50px;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+.subnav>li:hover>a,
+#nav>li:hover>a {
+    display: block;
+    color: black;
+    background-color: gray;
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #f4f4f4;
+    min-width: 160px;
+    padding: 0;
+    z-index: 9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+
+
+
+
+
+.subnav a {
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+    text-decoration: none;
+
+}
+
+.subnav li{
+    display: block;
 }
 
 main {
     padding: 20px;
     text-align: center;
+    margin-top: 60px;
 }
 
 section {
-    margin: 50px ;
+    margin: 50px 0;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
 
-
-
-        .flex-container {
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Căn giữa theo chiều dọc */
-            gap: 15px; 
-
-        }
-
-/* .meeting-btn {
+.meeting-btn,
+.join-btn {
     background-color: #4285f4;
     color: white;
-    border-radius: 8px;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: 500;
     border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
     cursor: pointer;
-} */
-
-        .meeting-btn, .join-btn {
-            background-color: #4285f4;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .meeting-btn .icon {
-            margin-right: 8px;
-        }
+}
 
 .meeting-btn:hover {
     background-color: #357ae8;
 }
 
-.input-meeting {
-    margin-top: 20px;
-}
-
-input[type="text"] {
-    padding: 10px;
-    padding-left: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 250px;
-}
- input:focus+.placeholder-text {
-     display: none;
- }
-
 .join-btn {
     padding: 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
     background-color: #f4f4f4;
     color: darkgray;
+    border-radius: 3px;
 }
+
 .join-btn.active {
     background-color: transparent;
+    color: #4285f4;
     cursor: pointer;
 }
 
 .join-btn.active:hover {
-    color:rgb(13, 100, 193);
-    background-color: rgb(230, 236, 241);
+    color: #0d64c1;
+    background-color: #e6ecf1;
 }
- .input_container {
-     position: relative;
-     display: flex;
-     align-items: center;
- }
 
- .input_container .icon {
-     position: absolute;
-     left: 10px;
-     top: 50%;
-     transform: translateY(-50%);
-     pointer-events: none;
- }
+.input_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
- .input_container input[type="text"] {
-     padding-left: 40px;
-     /* Chừa không gian cho icon */
-     padding-right: 10px;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     border: 2px solid #0066ff;
-     border-radius: 5px;
-     width: 300px;
-     font-size: 16px;
-     color: #666;
- }
+.input_container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
 
- input[type="text"]::placeholder {
-     font-size: 16px;
-     color: #666;
- }
+.input_container input[type="text"] {
+    width: 300px;
+    padding: 10px 10px 10px 40px;
+    border: 2px solid #0066ff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #666;
+    top: 50%;
+}
 
- input[type="text"]:focus {
-     outline: none;
-     border-color: #0066ff;
- }
+input[type="text"]::placeholder {
+    font-size: 16px;
+    color: #666;
+}
 
- footer {
-     background-color: #333;
-     color: white;
-     text-align: center;
-     padding: 10px 0;
-     position: fixed;
-     width: 100%;
-     bottom: 0;
- }
+input[type="text"]:focus {
+    outline: none;
+    border-color: #0066ff;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

@@ -19,11 +19,9 @@ function enterCode(){
 
     if (meetingCodeInput.value.trim() !== "" && meetingCodeInput.value !== "Nhập mã cuộc họp") {
         joinButton.disabled = false; 
-        joinButton.hidden = false;
         joinButton.classList.add('active'); // Thêm class active để có màu xanh
     } else {
         joinButton.disabled = true; 
-        joinButton.hidden = true;
         joinButton.classList.remove('active'); // Loại bỏ class active
     }
 }

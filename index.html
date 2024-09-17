@@ -13,13 +13,27 @@
 
 <body>
     <header>
-        <nav>
+        <ul id = "nav">
                 <!-- The a boi vi an vao duoc -->
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Lớp học</a></li>
-                <li><a href="#">Phòng học</a></li>
-                <li><a href="#">Tài khoản</a></li>
-        </nav>
+                <li><a href="#">Tài khoản</a>
+                    <ul class="subnav">
+                        <li><a href="">Thông tin</a></li>
+                        <li><a href="">Đăng xuất</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Lớp học</a>
+                    <ul class = "subnav">
+                        <li><a href = "">Danh sách</a></li>
+                        <li><a href = "">Tài liệu</a></li>
+                        <li><a href = "">Bài tập</a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="#">Lịch hẹn</a></li>   
+                <li><a href="#">Thông báo</a></li>                             
+        </ul>
     </header>
 
     <main>
@@ -42,7 +56,7 @@
                     <input type="text" id="meetingCode" placeholder="Nhập mã hoặc đường dẫn" oninput="enterCode()">
                 </div>
 
-                <button id="joinButton" class="join-btn" onclick="joinMeeting()" disabled hidden>Tham gia</button>
+                <button id="joinButton" class="join-btn" onclick="joinMeeting()" disabled >Tham gia</button>
             </div>
 
         </section>
