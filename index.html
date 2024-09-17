@@ -14,39 +14,38 @@
 <body>
     <header>
         <nav>
-            <ul>
+                <!-- The a boi vi an vao duoc -->
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Lớp học</a></li>
                 <li><a href="#">Phòng học</a></li>
                 <li><a href="#">Tài khoản</a></li>
-            </ul>
         </nav>
     </header>
+
     <main>
-<section>
-    <h2>Dạy và học trực tuyến</h2>
-    <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
+        <section>
+            <h2>Dạy và học trực tuyến</h2>
+            <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
 
-    <!-- Tạo container để giữ các nút và input trên cùng một hàng -->
-    <div class="flex-container">
-        <button id="NewClassRoom" type="button" class="meeting-btn">
-            <span class="icon">
-                <img src="https://img.icons8.com/ios-filled/24/ffffff/plus-math.png" alt="plus icon" />
-            </span>
-            Cuộc họp mới
-        </button>
+            <div class="flex-container">
+                <button id="NewClassRoom" type="button" class="meeting-btn">
+                    <span class="icon">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/plus-math.png" alt="plus icon" />
+                    </span>
+                    Cuộc họp mới
+                </button>
 
-        <div class="input_container">
-            <span class="icon">
-                <img src="https://img.icons8.com/ios-filled/20/000000/keyboard.png" alt="keyboard icon">
-            </span>
-            <input type="text" id="meetingCode" placeholder="Nhập mã hoặc đường dẫn" oninput="enterCode()">
-        </div>
+                <div class="input_container">
+                    <span class="icon">
+                        <img src="https://img.icons8.com/ios-filled/20/000000/keyboard.png" alt="keyboard icon">
+                    </span>
+                    <input type="text" id="meetingCode" placeholder="Nhập mã hoặc đường dẫn" oninput="enterCode()">
+                </div>
 
-        <button id="joinButton" class="join-btn" onclick="joinMeeting()" disabled>Tham gia</button>
-    </div>
+                <button id="joinButton" class="join-btn" onclick="joinMeeting()" disabled hidden>Tham gia</button>
+            </div>
 
-</section>
+        </section>
     </main>
     <footer>
         <p>&copy; PBL4</p>

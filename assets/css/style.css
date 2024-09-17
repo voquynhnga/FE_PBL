@@ -15,26 +15,25 @@ header {
     color: white;
     padding: 10px 0;
     text-align: center;
-    position: -webkit-sticky;
-}
-
-header h1 {
+    position: fixed;
     margin-bottom: 10px;
+    width: 100%;
 }
 
-nav ul {
+nav {
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
-nav ul li {
+nav li {
     margin: 0 15px;
 }
 
-nav ul li a {
+nav li a {
     color: white;
     text-decoration: none;
+    display: inline-block;
 }
 
 main {
@@ -42,25 +41,19 @@ main {
     text-align: center;
 }
 
-section h2 {
-    margin-bottom: 10px;
+section {
+    margin: 50px ;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+
 
 
         .flex-container {
             display: flex;
+            justify-content: center;
             align-items: center; /* Căn giữa theo chiều dọc */
             gap: 15px; 
+
         }
 
 /* .meeting-btn {
@@ -159,4 +152,14 @@ input[type="text"] {
  input[type="text"]:focus {
      outline: none;
      border-color: #0066ff;
+ }
+
+ footer {
+     background-color: #333;
+     color: white;
+     text-align: center;
+     padding: 10px 0;
+     position: fixed;
+     width: 100%;
+     bottom: 0;
  }
