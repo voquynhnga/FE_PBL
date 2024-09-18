@@ -94,6 +94,8 @@ main {
 
 section {
     margin: 50px 0;
+    align-items: center;
+    text-align: center;
 }
 
 .flex-container {
@@ -169,6 +171,8 @@ input[type="text"]:focus {
     outline: none;
     border-color: #0066ff;
 }
+
+
 
 footer {
     background-color: #333;

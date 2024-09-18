@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+
+
+
+</head>
+
+<body>
+
+
+    <div class="modal" id="newMeeting_Modal">
+        <span class="close-btn" id="btn-closeModal">&times;</span>
+
+    </div>
+    <!-- 
+            <div class="flex-container">
+                <button id="NewClassRoom" type="button" class="meeting-btn">
+                    <span class="icon">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/plus-math.png" alt="plus icon" />
+                    </span>
+                    Cuộc họp mới
+                </button>
+        
+                <div class="input_container">
+                    <span class="icon">
+                        <img src="https://img.icons8.com/ios-filled/20/000000/keyboard.png" alt="keyboard icon">
+                    </span>
+                    <input type="text" id="meetingCode" placeholder="Nhập mã hoặc đường dẫn" oninput="enterCode()">
+                </div>
+        
+                <button id="joinButton" class="join-btn" onclick="joinMeeting()" disabled>Tham gia</button>
+        
+            </div>
+        
+        -->
+
+
+    <div class="container">
+        <section>
+            <h2>Dạy và học trực tuyến</h2>
+            <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
+        </section>
+        <button type="button" class="btn btn-primary" id="btn-login" onclick="login()">Đăng nhập</button>
+        <button type="button" class="btn btn-primary" id="btn-openModal" onclick="openModalMeeting()">Tham gia cuộc
+            họp</button>
+        <!-- <form id="loginForm">
+          <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div> 
+        </form> -->
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

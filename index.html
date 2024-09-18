@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Web Page</title>
+    <title>Online Classroom</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -32,34 +32,18 @@
                 
                 </li>
                 <li><a href="#">Lịch hẹn</a></li>   
-                <li><a href="#">Thông báo</a></li>                             
+                <li><a href="#">
+                    <span class="icon">
+                        <img src="https://img.icons8.com/?size=100&id=849XkTbsgJDo&format=png&color=FFFFFF" alt="notification icon" width="20px" height="20px" >
+                    </span>
+                </a>
+
+                </li>                             
         </ul>
     </header>
 
     <main>
-        <section>
-            <h2>Dạy và học trực tuyến</h2>
-            <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
 
-            <div class="flex-container">
-                <button id="NewClassRoom" type="button" class="meeting-btn">
-                    <span class="icon">
-                        <img src="https://img.icons8.com/ios-filled/24/ffffff/plus-math.png" alt="plus icon" />
-                    </span>
-                    Cuộc họp mới
-                </button>
-
-                <div class="input_container">
-                    <span class="icon">
-                        <img src="https://img.icons8.com/ios-filled/20/000000/keyboard.png" alt="keyboard icon">
-                    </span>
-                    <input type="text" id="meetingCode" placeholder="Nhập mã hoặc đường dẫn" oninput="enterCode()">
-                </div>
-
-                <button id="joinButton" class="join-btn" onclick="joinMeeting()" disabled >Tham gia</button>
-            </div>
-
-        </section>
     </main>
     <footer>
         <p>&copy; PBL4</p>

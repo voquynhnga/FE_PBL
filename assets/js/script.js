@@ -25,3 +25,21 @@ function enterCode(){
         joinButton.classList.remove('active'); // Loại bỏ class active
     }
 }
+
+function login(){
+    window.location.href = "index.html";
+}
+
+function openModalMeeting(){
+    const modal = document.getElementById("newMeeting_Modal");
+    const openModalBtn = document.getElementById("btn-openModal");
+    const closeModalBtn = document.getElementById('btn-closeModal');
+
+    openModalBtn.onclick = function () {
+        modal.style.display = 'block';
+    }
+
+    closeModalBtn.onclick = function () {
+        modal.style.display = 'none';
+    }    
+}
