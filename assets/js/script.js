@@ -5,13 +5,29 @@ function createMeeting() {
 }
 
 function joinMeeting() {
-    let meetingCode = document.getElementById("meetingCode").value;
+    let meetingCode = document.getElementById("meeting-id").value;
+    const joinMeeting = document.getElementById("joinMeeting");
     if (meetingCode) {
         window.location.href = `meeting.html?code=${meetingCode}`;
+        joinMeeting.disabled = false;
+    
     } else {
-        alert("Vui lòng nhập mã cuộc họp!");
+        joinMeeting.disabled = true;
+
     }
 }
+
+function checkMeetingId() {
+    const meetingId = document.getElementById("meeting-id").value;
+    const joinButton = document.getElementById("joinMeeting");
+
+    if (meetingId.trim() !== "") {
+        joinButton.disabled = false;
+    } else {
+        joinButton.disabled = true;
+    }
+}
+
 
 function enterCode(){
     const meetingCodeInput = document.getElementById('meetingCode');
@@ -30,16 +46,14 @@ function login(){
     window.location.href = "index.html";
 }
 
-function openModalMeeting(){
-    const modal = document.getElementById("newMeeting_Modal");
-    const openModalBtn = document.getElementById("btn-openModal");
-    const closeModalBtn = document.getElementById('btn-closeModal');
+document.getElementById("btn-openModal").addEventListener("click", function () {
+    document.getElementById("newMeeting_Modal").style.display = "block";
+});
 
-    openModalBtn.onclick = function () {
-        modal.style.display = 'block';
-    }
+document.getElementById("btn-closeModal").addEventListener("click", function () {
+    document.getElementById("newMeeting_Modal").style.display = "none";
+});
 
-    closeModalBtn.onclick = function () {
-        modal.style.display = 'none';
-    }    
-}
+
+
+

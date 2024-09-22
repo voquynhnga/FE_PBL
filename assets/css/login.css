@@ -1,39 +1,40 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    place-items: center ;
+    align-items: center;
     height: 100vh;
     width: 100vw;
-
 }
 
- .btn-primary{
-    top: 50%;
-    padding: 8px 16px;
+.modal-content {
+    height: 300px;
+}
+
+.modal-title h5 {
+    text-align: center;
+}
+
+.btn-primary {
     margin-bottom: 12px;
     width: 320px;
-    height: 39.6px;
+    height: 40px;
     background-color: #5b5fc7;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background-color: #474bc7;
 }
 
-#btn-openModal{
+#btn-openModal {
     background-color: transparent;
     color: black;
 }
 
-#newMeeting_Modal{
-    width: 50vh;
-    height: 50vh;
+
+
+#joinMeeting:disabled {
+    cursor: not-allowed;
+    background-color: rgb(216, 215, 215);
+    color: gray;
 }
-
-

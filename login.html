@@ -8,61 +8,57 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/login.css">
-
-
-
 </head>
 
 <body>
-
-
-    <div class="modal" id="newMeeting_Modal">
-        <span class="close-btn" id="btn-closeModal">&times;</span>
-
-    </div>
-    <!-- 
-            <div class="flex-container">
-                <button id="NewClassRoom" type="button" class="meeting-btn">
-                    <span class="icon">
-                        <img src="https://img.icons8.com/ios-filled/24/ffffff/plus-math.png" alt="plus icon" />
-                    </span>
-                    Cuộc họp mới
-                </button>
-        
-                <div class="input_container">
-                    <span class="icon">
-                        <img src="https://img.icons8.com/ios-filled/20/000000/keyboard.png" alt="keyboard icon">
-                    </span>
-                    <input type="text" id="meetingCode" placeholder="Nhập mã hoặc đường dẫn" oninput="enterCode()">
+    <div class="modal fade" id="newMeeting_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tham gia cuộc họp</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-        
-                <button id="joinButton" class="join-btn" onclick="joinMeeting()" disabled>Tham gia</button>
-        
+                <div class="modal-body">
+                    <form id="meeting-form">
+                        <div class="form-group">
+                            <label for="meeting-id">ID cuộc họp *</label>
+                            <input type="text" class="form-control" id="meeting-id" placeholder="Nhập ID cuộc họp"
+                                required oninput="checkMeetingId()">
+                        </div>
+                        <div class="form-group">
+                            <label for="meeting-password">Mật mã cuộc họp (tùy chọn)</label>
+                            <input type="password" class="form-control" id="meeting-password"
+                                placeholder="Nhập mật mã cuộc họp">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="joinMeeting" disabled>Tham gia cuộc
+                            họp</button>
+                    </form>
+                </div>
             </div>
-        
-        -->
+        </div>
+    </div>
 
-
-    <div class="container">
+    <div class="container text-center">
         <section>
             <h2>Dạy và học trực tuyến</h2>
             <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
         </section>
         <button type="button" class="btn btn-primary" id="btn-login" onclick="login()">Đăng nhập</button>
-        <button type="button" class="btn btn-primary" id="btn-openModal" onclick="openModalMeeting()">Tham gia cuộc
-            họp</button>
-        <!-- <form id="loginForm">
-          <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter your username">
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
-            </div> 
-        </form> -->
+        <button type="button" class="btn btn-primary" id ="btn-openModal" data-toggle="modal" data-target="#newMeeting_Modal">
+            Tham gia cuộc họp
+        </button>
     </div>
+
+    <footer>
+        <p>&copy; PBL4</p>
+    </footer>
+
     <script src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
