@@ -55,5 +55,16 @@ document.getElementById("btn-closeModal").addEventListener("click", function () 
 });
 
 
+function openClass() {
+    const className = document.querySelector('.class_name_box').textContent;
+
+    localStorage.setItem('className', className);
+
+    window.location.href = "class_detail.html";
+}
+
+
+
+
 
 

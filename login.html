@@ -11,7 +11,22 @@
 </head>
 
 <body>
-    <div class="modal fade" id="newMeeting_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
+        <section class="text-center mb-4">
+            <h2>Dạy và học trực tuyến</h2>
+            <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
+        </section>
+        <button type="button" class="btn btn-primary-custom mb-3" id="btn-login" onclick="login()">Đăng nhập</button>
+        <button type="button" class="btn btn-primary-custom" id="btn-openModal" data-toggle="modal"
+            data-target="#newMeetingModal">
+            Tham gia cuộc họp
+        </button>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="newMeetingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -24,31 +39,20 @@
                     <form id="meeting-form">
                         <div class="form-group">
                             <label for="meeting-id">ID cuộc họp *</label>
-                            <input type="text" class="form-control" id="meeting-id" placeholder="Nhập ID cuộc họp"
-                                required oninput="checkMeetingId()">
+                            <input type="text" class="form-control" id="meeting-id" placeholder="Nhập ID cuộc họp" required
+                                oninput="checkMeetingId()">
                         </div>
                         <div class="form-group">
                             <label for="meeting-password">Mật mã cuộc họp (tùy chọn)</label>
                             <input type="password" class="form-control" id="meeting-password"
                                 placeholder="Nhập mật mã cuộc họp">
                         </div>
-                        <button type="submit" class="btn btn-primary" id="joinMeeting" disabled>Tham gia cuộc
+                        <button type="submit" class="btn btn-primary btn-block" id="joinMeeting" disabled>Tham gia cuộc
                             họp</button>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container text-center">
-        <section>
-            <h2>Dạy và học trực tuyến</h2>
-            <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
-        </section>
-        <button type="button" class="btn btn-primary" id="btn-login" onclick="login()">Đăng nhập</button>
-        <button type="button" class="btn btn-primary" id ="btn-openModal" data-toggle="modal" data-target="#newMeeting_Modal">
-            Tham gia cuộc họp
-        </button>
     </div>
 
     <footer>
