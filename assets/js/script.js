@@ -1,7 +1,7 @@
 function createMeeting() {
     let newMeetingCode = Math.random().toString(36).substring(2, 8);
     alert("Tạo cuộc họp mới với mã: " + newMeetingCode);
-    window.location.href = `meeting.html?code=${newMeetingCode}`;
+    window.location.href = `prepare_meeting.html?code=${newMeetingCode}`;
 }
 
 function joinMeeting() {
@@ -46,6 +46,10 @@ function login(){
     window.location.href = "index.html";
 }
 
+function openMeeting(){
+    window.location.replace("meeting.html");
+}
+
 document.getElementById("btn-openModal").addEventListener("click", function () {
     document.getElementById("newMeeting_Modal").style.display = "block";
 });
@@ -53,6 +57,17 @@ document.getElementById("btn-openModal").addEventListener("click", function () {
 document.getElementById("btn-closeModal").addEventListener("click", function () {
     document.getElementById("newMeeting_Modal").style.display = "none";
 });
+
+
+function openClass() {
+    const className = document.querySelector('.class_name_box').textContent;
+
+    localStorage.setItem('className', className);
+
+    window.location.href = "class_detail.html";
+}
+
+
 
 
 
