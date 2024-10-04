@@ -1,7 +1,7 @@
 function createMeeting() {
     let newMeetingCode = Math.random().toString(36).substring(2, 8);
     alert("Tạo cuộc họp mới với mã: " + newMeetingCode);
-    window.location.href = `meeting.html?code=${newMeetingCode}`;
+    window.location.href = `prepare_meeting.html?code=${newMeetingCode}`;
 }
 
 function joinMeeting() {
@@ -44,6 +44,10 @@ function enterCode(){
 
 function login(){
     window.location.href = "index.html";
+}
+
+function openMeeting(){
+    window.location.replace("meeting.html");
 }
 
 document.getElementById("btn-openModal").addEventListener("click", function () {

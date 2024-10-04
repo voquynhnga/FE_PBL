@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Chat Layout</title>
+    <title>Class Detail</title>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
 
@@ -53,8 +53,8 @@
         }
 
         .ti-video-camera{
-            position: absolute;
-            right: 48px;
+            position: relative;
+            margin-left: 20px;
         }
 
 
@@ -66,9 +66,6 @@
         <div class="custom-toolbar d-flex align-items-center">
             <div class="d-flex flex-column">
                 <div class="toolbar-tabs">
-                    <a href="post.html" target="main-content-class" class="me-3">Bài đăng</a>
-                    <a href="file.html" target="main-content-class" >Tệp</a>
-                    <a href = "/meeting.html" target= "_blank" class = "ti-video-camera" onclick="createMeeting()"></a>
 
                 </div>
             </div>
@@ -83,12 +80,16 @@
                         <h5 id = "class_name"></h5>
                     </div>
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action">Trang chủ</a>
-                        <a href="#" class="list-group-item list-group-item-action">Class Notebook</a>
-                        <a href="#" class="list-group-item list-group-item-action">Bài tập trên lớp</a>
+                        <a href="post.html" target="main-content-class" class="list-group-item list-group-item-action">Trang chủ</a>
                         <a href="#" class="list-group-item list-group-item-action">Bài tập</a>
-                        <a href="#" class="list-group-item list-group-item-action">Grades</a>
-                        <a href="#" class="list-group-item list-group-item-action">Reflect</a>
+                        <a href="file.html" target="main-content-class" class="list-group-item list-group-item-action">Tài liệu</a>
+                        <a href="#" class="list-group-item list-group-item-action">Danh sách</a>
+                        <a href="#" class="list-group-item list-group-item-action">Điểm số</a>
+                        <a href="#" class="list-group-item list-group-item-action">Lịch</a>
+                        <a href ="/src/meeting/prepare_meeting.html" target= "_parent" class="list-group-item list-group-item-action"  onclick="createMeeting()">
+                            Tạo cuộc họp
+                            <i class = "ti-video-camera"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -101,7 +102,7 @@
     </div>
 
 
-    <script src="./assets/js/script.js">
+    <script src="/assets/js/script.js">
     </script>
 
 
