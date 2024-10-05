@@ -37,3 +37,59 @@ body{
 .ti-more-alt{
     padding-left: 10px;
 }
+
+.subnav {
+    list-style-type: none;
+}
+
+.ti-more-alt small .subnav {
+    display: block;
+}
+
+
+
+
+.subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #f4f4f4;
+    min-width: 160px;
+    padding: 0;
+    z-index: 9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+
+
+.subnav a {
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+    text-decoration: none;
+
+}
+
+.subnav li {
+    display: block;
+}
+
+.subnav>li:hover>a {
+    display: block;
+    color: black;
+    background-color: gray;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .subnav {
+    display: none;
+}
+
+.dropdown.active .subnav {
+    display: block;
+}
