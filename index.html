@@ -8,48 +8,29 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
-
-
 </head>
 
 <body>
     <header>
-        <ul id = "nav">
-                <!-- The a boi vi an vao duoc -->
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Tài khoản</a>
-                    <ul class="subnav">
-                        <li><a href="">Thông tin</a></li>
-                        <li><a href="">Đăng xuất</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./src/class/class.html" target="content">Lớp học</a>
-                    <ul class = "subnav">
-                        <li><a href = "">Danh sách</a></li>
-                        <li><a href = "">Tài liệu</a></li>
-                        <li><a href = "">Bài tập</a></li>
-                    </ul>
-                
-                </li>
-                <li><a href="#">Lịch hẹn</a></li>   
-
-
-                </li>       
-                                      
+        <ul id="nav">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Tài khoản</a></li>
+            <li><a href="./src/class/class.html" target="content">Lớp học</a></li>
+            <li><a href="#">Lịch hẹn</a></li>
         </ul>
-        <div class="icon" id="icon-search">
-            <i class="ti-bell"></i>
+
+        <div class="icon">
+            <i class="ti-bell" id="bell-icon"></i>
+            <ul class="notification-menu" id="notification-menu">
+                <li><a href="#">Thông báo 1</a></li>
+                <li><a href="#">Thông báo 2</a></li>
+                <li><a href="#">Thông báo 3</a></li>
+            </ul>
         </div>
-
-
     </header>
 
     <main>
-        <iframe class = "container-fluid" id = "content" name="content">
-
-        </iframe>
-
+        <iframe class="container-fluid" id="content" name="content"></iframe>
     </main>
     <footer>
         <p>&copy; PBL4</p>
@@ -57,7 +38,23 @@
 
     <script src="./assets/js/script.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const bellIcon = document.getElementById("bell-icon");
+            const notificationMenu = document.getElementById("notification-menu");
 
+            bellIcon.addEventListener("click", function (event) {
+                event.stopPropagation();
+                notificationMenu.classList.toggle("active");
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!bellIcon.contains(event.target)) {
+                    notificationMenu.classList.remove("active");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
