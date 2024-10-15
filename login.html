@@ -10,50 +10,50 @@
     <link rel="stylesheet" href="./assets/css/login.css">
 </head>
 
-<body>
+<body
 
-    <div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
-        <section class="text-center mb-4">
-            <h2>Dạy và học trực tuyến</h2>
-            <p>Tạo cuộc họp trực tuyến một cách nhanh chóng.</p>
-        </section>
-        <button type="button" class="btn btn-primary-custom mb-3" id="btn-login" onclick="login()">Đăng nhập</button>
-        <button type="button" class="btn btn-primary-custom" id="btn-openModal" data-toggle="modal"
-            data-target="#newMeetingModal">
-            Tham gia cuộc họp
-        </button>
-    </div>
-    
-    <!-- Modal -->
-    <div class="modal fade" id="newMeetingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tham gia cuộc họp</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="meeting-form">
-                        <div class="form-group">
-                            <label for="meeting-id">ID cuộc họp *</label>
-                            <input type="text" class="form-control" id="meeting-id" placeholder="Nhập ID cuộc họp" required
-                                oninput="checkMeetingId()">
-                        </div>
-                        <div class="form-group">
-                            <label for="meeting-password">Mật mã cuộc họp (tùy chọn)</label>
-                            <input type="password" class="form-control" id="meeting-password"
-                                placeholder="Nhập mật mã cuộc họp">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block" id="joinMeeting" disabled>Tham gia cuộc
-                            họp</button>
-                    </form>
-                </div>
+    <section
+        class="mt-0 overflow-hidden {{ config.classes.content }} vh-100 d-flex justify-content-center align-items-center p-4">
+       
+
+        <div class="col col-md-8 col-lg-6 col-xxl-5">
+            <a class="navbar-brand fw-bold fs-3 flex-shrink-0 order-0 align-self-center justify-content-center d-flex mx-0 px-0"
+                href="{{webRoot}}/index.html">
+                <!-- {{> logo/logo-icon }} -->
+            </a>
+
+            <div class="shadow-xl p-4 p-lg-5 bg-white">
+                <h1 class="text-center fw-bold mb-5 fs-2">Login</h1>
+                <a href="#" class="btn btn-facebook d-block mb-2"><i class="ri-facebook-circle-fill align-bottom"></i>
+                    Login
+                    with Facebook</a>
+                <a href="#" class="btn btn-twitter d-block mb-2"><i class="ri-twitter-fill align-bottom"></i> Login with
+                    Twitter</a>
+                <span class="text-muted text-center d-block fw-bolder my-4">OR</span>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="login-email">Email address</label>
+                        <input type="email" class="form-control" id="login-email" placeholder="name@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password"
+                            class="form-label d-flex justify-content-between align-items-center">
+                            Password
+                            <a href="{{webRoot}}/forgotten-password.html" class="text-muted small">Forgot your
+                                password?</a>
+                        </label>
+                        <input type="password" class="form-control" id="login-password"
+                            placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-dark d-block w-100 my-4">Login</button>
+                </form>
+                <p class="d-block text-center text-muted">New customer? <a class="text-muted"
+                        href="{{webRoot}}/register.html">Sign up for an account</a></p>
             </div>
+
         </div>
-    </div>
+
+    </section>
 
     <footer>
         <p>&copy; PBL4</p>
