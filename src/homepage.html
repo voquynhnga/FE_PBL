@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Giáo Dục</title>
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <script src="/assets/js/vendor.bundle.js"></script>
+        
+    <script src="/assets/js/theme.bundle.js"></script>
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-y: scroll;
+        }
+
+        footer {
+            position: relative;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .title-small {
+            font-size: 1.25rem;
+        }
+
+        .display-3 {
+            font-size: 2.5rem;
+        }
+
+        .btn-psuedo {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid white;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .text-outline-dark {
+            text-shadow: 1px 1px 2px black;
+        }
+
+        #nav-item {
+            display: block;
+        }
+
+        #nav-item:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-white border-bottom">
+        <div class="container-fluid d-flex justify-content-end">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-body" href="/src/login_and_signup/login.html">Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-body" href="/src/login_and_signup/signup.html">Đăng ký</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Section-->
+    <section class="mt-0 overflow-hidden">
+
+        <!-- Top Banner -->
+        <div class="container-fluid p-0">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"
+                        style="background-image: url('/assets/img/i3.jpg'); height: 75vh;">
+                        <div
+                            class="d-flex h-100 align-items-center justify-content-center text-center text-white bg-dark bg-opacity-50">
+                            <div class="carousel-caption">
+                                <p class="title-small opacity-75">Nơi Học Tập Hiện Đại</p>
+                                <h2 class="display-3 fw-bold">Giáo Dục Cho Tương Lai</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image: url('/assets/img/i2.jpg'); height: 75vh;">
+                        <div
+                            class="d-flex h-100 align-items-center justify-content-center text-center text-white bg-dark bg-opacity-50">
+                            <div class="carousel-caption">
+                                <p class="title-small opacity-75">Học Tập Không Giới Hạn</p>
+                                <h2 class="display-3 fw-bold">Học Online Mọi Lúc, Mọi Nơi</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!--/ Top Banner-->
+
+                <!-- / Top banner -->
+                <!-- <section class="vh-75 vh-lg-60 container-fluid rounded overflow-hidden" data-aos="fade-in">
+                    <div class="swiper-container overflow-hidden rounded h-100 bg-light" data-swiper data-options='{
+                              "spaceBetween": 0,
+                              "slidesPerView": 1,
+                              "effect": "fade",
+                              "speed": 1000,
+                              "loop": true,
+                              "parallax": true,
+                              "observer": true,
+                              "observeParents": true,
+                              "lazy": {
+                                "loadPrevNext": true
+                                },
+                                "autoplay": {
+                                  "delay": 5000,
+                                  "disableOnInteraction": false
+                              },
+                              "pagination": {
+                                "el": ".swiper-pagination",
+                                "clickable": true
+                                }
+                              }'>
+                        <div class="swiper-wrapper">
+                
+                            <div class="swiper-slide position-relative h-100 w-100">
+                                <div class="w-100 h-100 overflow-hidden position-absolute z-index-1 top-0 start-0 end-0 bottom-0">
+                                    <div class="w-100 h-100 bg-img-cover bg-pos-center-center overflow-hidden"
+                                        data-swiper-parallax="-100"
+                                        style=" will-change: transform; background-image: url(./assets/images/banners/banner-1.jpg)">
+                                    </div>
+                                </div>
+                                <div
+                                    class="container position-relative z-index-10 d-flex h-100 align-items-start flex-column justify-content-center">
+                                    <p class="title-small text-white opacity-75 mb-0" data-swiper-parallax="-100">Everything You Need
+                                    </p>
+                                    <h2 class="display-3 tracking-wide fw-bold text-uppercase tracking-wide text-white"
+                                        data-swiper-parallax="100">
+                                        <span class="text-outline-light">Summer</span> Essentials
+                                    </h2>
+                                    <div data-swiper-parallax-y="-25">
+                                        <a href="./category.html" class="btn btn-psuedo text-white" role="button">Shop New Arrivals</a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="swiper-slide position-relative h-100 w-100">
+                                <div class="w-100 h-100 overflow-hidden position-absolute z-index-1 top-0 start-0 end-0 bottom-0">
+                                    <div class="w-100 h-100 bg-img-cover bg-pos-center-center overflow-hidden"
+                                        data-swiper-parallax="-100"
+                                        style=" will-change: transform; background-image: url(./assets/images/banners/banner-2.jpg)">
+                                    </div>
+                                </div>
+                                <div
+                                    class="container position-relative z-index-10 d-flex h-100 align-items-start flex-column justify-content-center">
+                                    <p class="title-small text-white opacity-75 mb-0" data-swiper-parallax="-100">Spring Collection</p>
+                                    <h2 class="display-3 tracking-wide fw-bold text-uppercase tracking-wide text-white"
+                                        data-swiper-parallax="100">
+                                        Adidas <span class="text-outline-light">SS21</span></h2>
+                                    <div data-swiper-parallax-y="-25">
+                                        <a href="./category.html" class="btn btn-psuedo text-white" role="button">Shop Latest Adidas</a>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                            <div class="swiper-slide position-relative h-100 w-100">
+                                <div class="w-100 h-100 overflow-hidden position-absolute z-index-1 top-0 start-0 end-0 bottom-0">
+                                    <div class="w-100 h-100 bg-img-cover bg-pos-center-center overflow-hidden"
+                                        data-swiper-parallax="-100"
+                                        style=" will-change: transform; background-image: url(./assets/images/banners/banner-4.jpg)">
+                                    </div>
+                                </div>
+                                <div
+                                    class="container position-relative z-index-10 d-flex h-100 align-items-start flex-column justify-content-center">
+                                    <p class="title-small text-white opacity-75 mb-0" data-swiper-parallax="-100">Just Do it</p>
+                                    <h2 class="display-3 tracking-wide fw-bold text-uppercase tracking-wide text-white"
+                                        data-swiper-parallax="100">
+                                        Nike <span class="text-outline-light">SS21</span></h2>
+                                    <div data-swiper-parallax-y="-25">
+                                        <a href="./category.html" class="btn btn-psuedo text-white" role="button">Shop Latest Nike</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="swiper-slide position-relative h-100 w-100">
+                                <div class="w-100 h-100 overflow-hidden position-absolute z-index-1 top-0 start-0 end-0 bottom-0">
+                                    <div class="w-100 h-100 bg-img-cover bg-pos-center-center overflow-hidden"
+                                        data-swiper-parallax="-100"
+                                        style=" will-change: transform; background-image: url(./assets/images/banners/banner-3.jpg)">
+                                    </div>
+                                </div>
+                                <div
+                                    class="container position-relative z-index-10 d-flex h-100 align-items-start flex-column justify-content-center">
+                                    <p class="title-small text-white opacity-75 mb-0" data-swiper-parallax="-100">Look Good Feel Good
+                                    </p>
+                                    <h2 class="display-3 tracking-wide fw-bold text-uppercase tracking-wide text-white"
+                                        data-swiper-parallax="100">
+                                        <span class="text-outline-light">Sustainable</span> Fashion
+                                    </h2>
+                                    <div data-swiper-parallax-y="-25">
+                                        <a href="./category.html" class="btn btn-psuedo text-white" role="button">Why We Are
+                                            Different</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                        <div class="swiper-pagination swiper-pagination-bullet-light"></div>
+                
+                    </div>
+                </section> 
+
+<!-- Homepage Intro-->
+        <div class="container my-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3 class="display-3 fw-bold mb-3">Học Tập Cùng <span class="text-outline-dark">Chúng Tôi</span></h3>
+                    <p class="lead">Giảng dạy linh hoạt.</p>
+                    <p class="lead">Học tập hiệu quả.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="/assets/img/i1.jpg" class="img-fluid rounded" alt="Giáo dục tiên tiến">
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <h3 class="display-3 fw-bold mb-3">Học Tập Cùng <span class="text-outline-dark">Chúng Tôi</span></h3>
+                    <p class="lead">Giảng dạy linh hoạt.</p>
+                    <p class="lead">Học tập hiệu quả.</p>
+                </div>
+                <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                    <img src="/assets/img/i1.jpg" class="img-fluid rounded" alt="Giáo dục tiên tiến">
+                </div>
+            </div>
+        </div>
+<!-- /Homepage Intro-->
+
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <p>© PBL4</p>
+    </footer>
+
+</body>
+
+</html>
